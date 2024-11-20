@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedal Pulse</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="images.png" alt="Blue Bikes Logo" id="logo">
+      <h1>Pedal Pulse</h1>
+    </header>
+
+    <main>
+      <section class="search-section">
+        <h2>Find Station Demand</h2>
+        <p>Enter ZIP Code</p>
+        <input type="text" id="zip-input" placeholder="Enter ZIP Code">
+        <p>Select your Station</p>
+        <select id="station-dropdown">
+          <!-- Station options will be dynamically populated -->
+        </select>
+        <button id="search-button">Search</button>
+      </section>
+
+      <section class="results-section">
+        <div>
+          <label for="next-hour-result">The estimated number of bikes available at your station in the next hour:</label>
+          <input type="text" id="next-hour-result" readonly>
+        </div>
+        <div>
+          <label for="day-select">Select a day:</label>
+          <select id="day-select">
+            <option value="today">Today</option>
+            <option value="tomorrow">Tomorrow</option>
+            <option value="day-after-tomorrow">Day After Tomorrow</option>
+          </select>
+        </div>
+        <div>
+          <label for="time-select">Select time:</label>
+          <input type="time" id="time-select">
+        </div>
+        <div>
+          <label for="specified-time-result">The estimated number of bikes available at your station for the specified time:</label>
+          <input type="text" id="specified-time-result" readonly>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
